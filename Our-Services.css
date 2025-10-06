@@ -62,7 +62,156 @@
   }
 }
 
-/* Services Section */ .services-overview { background: #f9f9f9; padding: 80px 8%; text-align: center; } .services-overview h2 { font-size: 2.2rem; color: #14b8a6; margin-bottom: 20px; } .services-overview .intro-text { max-width: 900px; margin: 0 auto 50px; font-size: 1.1rem; color: #444; line-height: 1.7; } .services-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; } .service-card { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: left; } .service-card h3 { font-size: 1.4rem; color: #14b8a6; margin-bottom: 15px; } .service-card p { font-size: 1rem; color: #555; line-height: 1.6; } .service-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
+.our-services-intro {
+  /* background: linear-gradient(135deg, #e4fbe4, #c5f1c8); */
+  padding: 100px 20px 80px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.services-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.services-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #065f1b, #0a8329);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.services-subtext {
+  font-size: 1.1rem;
+  color: #2e2e2e;
+  line-height: 1.9;
+  max-width: 850px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 25px 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.services-subtext:hover {
+  transform: translateY(-6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2.1rem;
+  }
+
+  .services-subtext {
+    font-size: 1rem;
+    padding: 20px;
+  }
+}
 
 
-/* Service Section */ .service-section { display: flex; align-items: center; justify-content: space-between; padding: 3rem 10%; gap: 2rem; border-radius: 15px; margin: 2rem auto; max-width: 1200px; color: #fff; } .service-section .service-content { flex: 1; } .service-section .service-content h2 { font-size: 1.8rem; margin-bottom: 1rem; } .service-section .service-content p, .service-section .service-content ul { margin-bottom: 1rem; text-align: justify; } .service-section .service-image { flex: 1; text-align: center; } .service-section .service-image img { width: 100%; max-width: 380px; } /* Background Colors */ .green { background: #4CAF50; } .blue { background: #1E88E5; } .orange { background: #FF9800; }
+.management-consultancy {
+  background: linear-gradient(135deg, #e4fbe4, #c5f1c8);
+  padding: 100px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #1b1b1b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main Heading */
+.section-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 80px;
+  background: linear-gradient(90deg, #065f1b, #0a8329);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Consultancy Blocks */
+.consultancy-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.consultancy-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.consultancy-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.consultancy-text h2 {
+  font-size: 1.8rem;
+  color: #0a7025;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.consultancy-text h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0a7025, #4bc86c);
+  border-radius: 2px;
+}
+
+.consultancy-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.consultancy-icon img {
+  width: 230px;
+  height: auto;
+  transition: transform 0.4s;
+}
+
+.consultancy-block:hover .consultancy-icon img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .consultancy-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consultancy-block.reverse {
+    flex-direction: column;
+  }
+
+  .consultancy-icon img {
+    width: 180px;
+    margin-top: 20px;
+  }
+
+  .consultancy-text h2 {
+    font-size: 1.6rem;
+  }
+}
