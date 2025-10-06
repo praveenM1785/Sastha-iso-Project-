@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* ====== Navbar Base Styles ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28a745; /* Bright green background */
+  padding: 10px 24px; /* Reduced padding */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+/* ====== Left Section (Logo + Brand) ====== */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+/* ====== Navigation Links ====== */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #004d00; /* Darker green on hover */
+}
+
+/* ====== Call Now Button ====== */
+.call-btn {
+  background-color: #006400; /* Dark green */
+  color: white;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ====== Hamburger Toggle Button ====== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 9999;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #28a745;
+    padding: 20px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .call-btn {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    padding: 7px 14px;
+  }
+}
